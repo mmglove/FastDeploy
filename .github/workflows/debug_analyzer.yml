@@ -1,0 +1,35 @@
+name: Debug CI Analyzer
+on:
+  # 使用 workflow_dispatch 可以让你手动触发调试
+  workflow_dispatch:
+    inputs:
+      log_path:
+        description: 'Path to the CI log file'
+        required: true
+        default: '/tmp/ci_failure.log'
+
+jobs:
+  analyze_failure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests chromadb # 或其他你需要的库
+
+      - name: Run CI Failure Analysis
+        env:
+          # 通过环境变量传递信息
+          LOG_FILE: ${{ github.event.inputs.log_path }}
+          # 如果有本地模型API，设置其地址
+          LLM_API_URL: "http://host.docker.internal:11434/api/generate"
+          LLM_MODEL: "qwen2.5:7b"
+        run: |
+          python scripts/ci_analyzer.py --log-file $LOG_FILE
