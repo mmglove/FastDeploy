@@ -134,3 +134,19 @@ sysctl -w kernel.msgmnb=268435456
 ### Deprecation Notice
 
 This System V message queue–based communication mechanism will be **deprecated in future releases**. Subsequent versions will migrate to a more robust communication method that eliminates the limitations described above.
+
+## 5. What is the version compatibility between PaddlePaddle and FastDeploy?
+
+The following table shows the recommended PaddlePaddle version for each FastDeploy release across different hardware platforms:
+
+| FastDeploy Version | Hardware Platform | PaddlePaddle Package | PaddlePaddle Version |
+|---|---|---|---|
+| 2.4.0 (Stable) | NVIDIA GPU | paddlepaddle-gpu | 3.3.0 |
+| 2.4.0 (Stable) | KunlunXin XPU | paddlepaddle-xpu | 3.3.0 |
+| 2.4.0 (Stable) | Intel Gaudi | paddlepaddle | 3.1.1 |
+| 2.4.0 (Stable) | Enflame GCU | paddlepaddle + paddle-custom-gcu | 3.1.1 |
+| 2.5.0-dev (Development) | Iluvatar GPU | paddlepaddle + paddle-iluvatar-gpu | 3.4.0.dev20260226 |
+| Nightly Build | NVIDIA GPU | paddlepaddle-gpu | Nightly Build |
+| Nightly Build | KunlunXin XPU | paddlepaddle-xpu | Nightly Build |
+
+> **Note:** Always refer to the [Installation Guide](../get_started/installation/README.md) for the most up-to-date version compatibility information for your target platform.

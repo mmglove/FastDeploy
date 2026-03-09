@@ -131,3 +131,19 @@ sysctl -w kernel.msgmnb=268435456
 ### 废弃说明
 
 当前基于 System V Message Queue 的通信机制将在后续版本中被废弃。未来将迁移到更稳定、更高效的通信方式，以彻底解决上述限制问题。
+
+## 5. Paddle 与 FastDeploy 的版本适配情况？
+
+以下是各版本 FastDeploy 在不同硬件平台上推荐使用的 PaddlePaddle 版本：
+
+| FastDeploy 版本 | 硬件平台 | PaddlePaddle 安装包 | PaddlePaddle 版本 |
+|---|---|---|---|
+| 2.4.0（稳定版） | 英伟达 GPU | paddlepaddle-gpu | 3.3.0 |
+| 2.4.0（稳定版） | 昆仑芯 XPU | paddlepaddle-xpu | 3.3.0 |
+| 2.4.0（稳定版） | 英特尔 Gaudi | paddlepaddle | 3.1.1 |
+| 2.4.0（稳定版） | 燧原 GCU | paddlepaddle + paddle-custom-gcu | 3.1.1 |
+| 2.5.0-dev （开发版） | 天数 GPU | paddlepaddle + paddle-iluvatar-gpu | 3.4.0.dev20260226 |
+| Nightly Build | 英伟达 GPU | paddlepaddle-gpu | Nightly Build |
+| Nightly Build | 昆仑芯 XPU | paddlepaddle-xpu | Nightly Build |
+
+> **注意：** 如需获取最新的版本适配信息，请参考对应硬件平台的[安装指南](../get_started/installation/README.md)。
