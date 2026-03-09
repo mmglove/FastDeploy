@@ -1,5 +1,7 @@
 [English](../codebase_analysis.md)
 
+> **测试专用**
+
 # FastDeploy 代码库主要功能分析
 
 ## 项目概述
