@@ -109,6 +109,7 @@ plugins:
             Usage: 用法
             Log Description: 日志说明
             Code Overview: 代码概述
+            PR Analysis: PR 分析报告
             Environment Variables: 环境变量
 
 nav:
@@ -170,6 +171,7 @@ nav:
   - Usage:
       - Log Description: usage/log.md
       - Code Overview: usage/code_overview.md
+      - PR Analysis: pr_analysis.md
       - Environment Variables: usage/environment_variables.md
   - CLI:
       - Overview: cli/README.md
