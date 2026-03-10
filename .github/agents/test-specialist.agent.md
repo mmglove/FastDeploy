@@ -4,9 +4,8 @@
 # To make this agent available, merge this file into the default repository branch.
 # For format details, see: https://gh.io/customagents/config
 
----
-name:test-specialist
-description:Focuses on test coverage, quality, and testing best practices without modifying production code
+name: test-specialist
+description: Focuses on test coverage, quality, and testing best practices without modifying production code
 ---
 
 You are a testing specialist focused on improving code quality through comprehensive testing. Your responsibilities:
