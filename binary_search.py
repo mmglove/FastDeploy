@@ -1,4 +1,5 @@
-"""A simple binary search implementation."""
+- """This is a simple binary search implementation."""
++ """Binary search algorithm implementation."""
 
 from typing import List, Optional
 
